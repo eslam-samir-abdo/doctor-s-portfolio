@@ -1,0 +1,33 @@
+.edit-fab {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-gold-soft);
+  color: var(--color-ink);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  z-index: 5;
+  box-shadow: 0 6px 16px rgba(199, 154, 75, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.edit-fab:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(199, 154, 75, 0.45);
+}
+
+.edit-fab__icon {
+  font-size: 0.85rem;
+}
+
+.edit-fab--add {
+  position: static;
+  margin: 0 auto 32px;
+  display: flex;
+}

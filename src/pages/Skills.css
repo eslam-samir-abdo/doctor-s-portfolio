@@ -1,0 +1,151 @@
+.skills-page {
+  padding-top: 140px;
+  min-height: 80vh;
+}
+
+.skills-bars {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 640px;
+}
+
+.skill-bar__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+}
+
+.skill-bar__pct {
+  color: var(--color-sage);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.skill-bar__track {
+  height: 10px;
+  background: var(--color-mist);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  width: 0;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-sage), var(--color-deep-teal));
+}
+
+.skill-bar.is-visible .skill-bar__fill {
+  animation: growBar 1.1s var(--ease-out) forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes growBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+.skills-tags-grid {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 0.8fr;
+  gap: 40px;
+}
+
+.tag-group__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-deep-teal);
+  margin-bottom: 18px;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: var(--color-mist);
+  border: 1px solid var(--color-line);
+  color: var(--color-teal);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  background: var(--color-seafoam);
+}
+
+.tag--accent {
+  background: var(--color-gold-soft);
+  border-color: transparent;
+  color: var(--color-ink);
+}
+
+.tag--accent:hover {
+  background: var(--color-gold);
+  color: var(--color-paper);
+}
+
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 8px;
+}
+
+.lang-row__level {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-sage);
+}
+
+.modal-subhead {
+  font-size: 0.95rem;
+  color: var(--color-deep-teal);
+  margin-bottom: 12px;
+}
+
+.skill-edit-row {
+  display: grid;
+  grid-template-columns: 1fr 70px 32px;
+  gap: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.skill-edit-row input {
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  background: var(--color-mist);
+}
+
+@media (max-width: 860px) {
+  .skills-tags-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

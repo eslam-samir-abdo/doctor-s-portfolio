@@ -1,0 +1,95 @@
+.pageloader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: var(--color-deep-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease-out;
+}
+
+.pageloader-overlay--visible {
+  opacity: 1;
+}
+
+.pageloader-content {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- capsule (phase: loading) ---- */
+.pageloader-capsule {
+  width: 46px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.pageloader-capsule--spin {
+  animation: pageloaderCapsuleSpin 0.32s var(--ease-spring) forwards;
+}
+
+.pageloader-capsule-half {
+  width: 50%;
+  height: 100%;
+}
+
+.pageloader-capsule-half--teal {
+  background: var(--color-sage);
+}
+
+.pageloader-capsule-half--gold {
+  background: var(--color-gold-soft);
+}
+
+@keyframes pageloaderCapsuleSpin {
+  0% {
+    transform: rotate(0deg) scale(0.6);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---- stamp seal (phase: stamp / done) ---- */
+.pageloader-stamp {
+  position: absolute;
+  color: var(--color-gold-soft);
+  opacity: 0;
+  transform: scale(1.4) rotate(-8deg);
+}
+
+.pageloader-stamp--visible {
+  animation: pageloaderStampIn 0.26s var(--ease-spring) forwards;
+}
+
+@keyframes pageloaderStampIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.4) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.94) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-3deg);
+  }
+}
