@@ -9,10 +9,10 @@ export const initialAbout = {
     "Faculty of Pharmacy graduate (Cairo University) specialized in regulatory documentation and compliance — bridging pharmaceutical science with the paperwork that gets medicine to patients safely.",
   bio:
     "I'm a licensed pharmacist with hands-on experience across community pharmacy, pharmaceutical data mapping, and regulatory affairs. My work centers on making sure products meet local and international requirements — from EDA submissions to product classification and licensing — with the same attention to detail I'd want for my own family's medicine cabinet.",
-  email: "reham.samir@example.com",
+  email: "reham.samii.abdo@std.pharma.cu.edu.eg",
   phone: "01100653757",
   location: "Warraq, Giza, Egypt",
-  linkedin: "https://linkedin.com/in/reham-samir",
+  linkedin: "https://www.linkedin.com/in/reham-samiir-969a54244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   university: "Faculty of Pharmacy, Cairo University",
   degree: "Pharm-D Bachelor — Excellent, cGPA 3.5/4 (Class of 2025)",
 };

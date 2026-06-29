@@ -1,8 +1,8 @@
 {
   "name": "reham-portfolio",
+  "homepage": "https://eslam-samir-abdo.github.io/doctor-s-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME",
   "dependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
